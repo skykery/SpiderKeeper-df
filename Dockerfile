@@ -10,4 +10,5 @@ RUN apk update &&\
     echo "Europe/Bucharest" > /etc/timezone
 RUN pip install --no-cache-dir spiderkeeper
 EXPOSE 5000 6800
+WORKDIR /home/db
 CMD ["sh", "-c", "spiderkeeper --username=$USERNAME --password=$PASSWORD --server=$SERVER"]
